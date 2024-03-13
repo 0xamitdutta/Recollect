@@ -58,7 +58,7 @@ export default function MemoryGame() {
             <h1 className="text-3xl font-sans font-bold p-4">Memory Game</h1>
             <div className="grid grid-cols-4 gap-4 p-4">
                 {cards.map((card, index) => (
-                    <div className={`h-[150px] w-[150px] bg-fuchsia-700 flex justify-center items-center text-3xl text-white cursor-pointer transform ${flipped.includes(index) || matched.includes(index) ? 'rotate-180' : ''} transition-transform ease-in-out duration-500`} onClick={() => handleClick(index)}>
+                    <div className={`h-[100px] w-[75px] md:w-[150px] md:h-[150px] bg-fuchsia-700 flex justify-center items-center text-3xl text-white cursor-pointer transform ${flipped.includes(index) || matched.includes(index) ? 'rotate-180' : ''} transition-transform ease-in-out duration-500`} onClick={() => handleClick(index)}>
                         {
                             flipped.includes(index) || matched.includes(index) ? <Image src={`/memoryCards/${card}.jpeg`} alt="memory card" height={150} width={150} className="rotate-180" /> : "?"
                         }
