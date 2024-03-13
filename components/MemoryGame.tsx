@@ -60,7 +60,7 @@ export default function MemoryGame() {
                 {cards.map((card, index) => (
                     <div className={`h-[100px] w-[75px] md:w-[150px] md:h-[150px] bg-fuchsia-700 flex justify-center items-center text-3xl text-white cursor-pointer transform ${flipped.includes(index) || matched.includes(index) ? 'rotate-180' : ''} transition-transform ease-in-out duration-500`} onClick={() => handleClick(index)}>
                         {
-                            flipped.includes(index) || matched.includes(index) ? <Image src={`/memoryCards/${card}.jpeg`} alt="memory card" height={150} width={150} className="rotate-180" /> : "?"
+                            flipped.includes(index) || matched.includes(index) ? <Image src={`/memoryCards/${card}.jpeg`} alt="memory card" fill className="rotate-180" /> : "?"
                         }
                     </div>
 
